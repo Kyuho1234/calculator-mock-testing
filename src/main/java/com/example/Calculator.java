@@ -35,15 +35,14 @@ public class Calculator {
         this.flipper = flipper;
     }
     
-    // 덧셈
+    // 덫셈
     public double add(double a, double b) {
         return adder.add(a, b);
     }
     
     public double add(double... numbers) {
         return adder.add(numbers);
-    }
-    
+    }    
     // 뺄셈
     public double subtract(double a, double b) {
         return subtractor.subtract(a, b);
@@ -78,10 +77,6 @@ public class Calculator {
     
     public double[] flip(double... numbers) {
         return flipper.flip(numbers);
-    }
-    
-    public double abs(double number) {
-        return flipper.abs(number);
     }
     
     // Getter 메서드들 (테스트에서 Mock 객체 검증용)
