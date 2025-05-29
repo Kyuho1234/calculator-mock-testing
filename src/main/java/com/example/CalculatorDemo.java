@@ -33,7 +33,8 @@ public class CalculatorDemo {
         // 부호 변경 테스트
         System.out.println("\n부호 변경 테스트:");
         System.out.println("flip(15) = " + calculator.flip(15.0));
-        System.out.println("Math.abs(-25) = " + Math.abs(-25.0));
+        System.out.println("flip(-7) = " + calculator.flip(-7.0));
+        System.out.println("flip(0) = " + calculator.flip(0.0));
         
         // 복합 연산 테스트
         System.out.println("\n복합 연산 테스트:");
