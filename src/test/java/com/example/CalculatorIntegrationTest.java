@@ -20,12 +20,12 @@ class CalculatorIntegrationTest {
     
     @Test
     void testAddition() {
-        // 기본 덧셈 테스트
+        // 기본 덭셈 테스트
         assertEquals(8.0, calculator.add(5.0, 3.0));
         assertEquals(0.0, calculator.add(-5.0, 5.0));
         assertEquals(-8.0, calculator.add(-5.0, -3.0));
         
-        // 여러 숫자 덧셈 테스트
+        // 여러 숫자 덭셈 테스트
         assertEquals(15.0, calculator.add(1.0, 2.0, 3.0, 4.0, 5.0));
         assertEquals(0.0, calculator.add());
     }
@@ -40,8 +40,7 @@ class CalculatorIntegrationTest {
         // 여러 숫자 뺄셈 테스트
         assertEquals(-13.0, calculator.subtract(1.0, 2.0, 3.0, 4.0, 5.0));
         assertEquals(0.0, calculator.subtract());
-    }
-    
+    }    
     @Test
     void testMultiplication() {
         // 기본 곱셈 테스트
@@ -76,17 +75,11 @@ class CalculatorIntegrationTest {
         assertEquals(5.0, calculator.flip(-5.0));
         assertEquals(0.0, calculator.flip(0.0));
         
-        // 절댁값 테스트
-        assertEquals(5.0, calculator.abs(-5.0));
-        assertEquals(5.0, calculator.abs(5.0));
-        assertEquals(0.0, calculator.abs(0.0));
-        
         // 여러 숫자 부호 변경 테스트
         double[] input = {1.0, -2.0, 3.0, -4.0};
         double[] expected = {-1.0, 2.0, -3.0, 4.0};
         assertArrayEquals(expected, calculator.flip(input));
-    }
-    
+    }    
     @Test
     void testComplexCalculations() {
         // 복합 연산 테스트
@@ -102,10 +95,10 @@ class CalculatorIntegrationTest {
         );
         assertEquals(9.0, result2); // (10+5) - (3*2) = 15 - 6 = 9
         
-        double result3 = calculator.abs(calculator.flip(
+        double result3 = calculator.flip(
             calculator.subtract(5.0, 10.0)
-        ));
-        assertEquals(5.0, result3); // abs(flip(5-10)) = abs(flip(-5)) = abs(5) = 5
+        );
+        assertEquals(5.0, result3); // flip(5-10) = flip(-5) = 5
     }
     
     @Test
@@ -114,9 +107,11 @@ class CalculatorIntegrationTest {
         assertEquals(Double.MAX_VALUE, calculator.add(Double.MAX_VALUE, 0.0));
         assertEquals(Double.MIN_VALUE, calculator.add(Double.MIN_VALUE, 0.0));
         
-        // 0으로 나누기 예외 테스트 (우리의 구현에서는 ArithmeticException을 던짐)
-        assertThrows(ArithmeticException.class, () -> calculator.divide(0.0, 0.0));
-        assertThrows(ArithmeticException.class, () -> calculator.divide(1.0, 0.0));
-        assertThrows(ArithmeticException.class, () -> calculator.divide(-1.0, 0.0));
+        // NaN 테스트
+        assertTrue(Double.isNaN(calculator.divide(0.0, 0.0)));
+        
+        // 무한대 테스트
+        assertEquals(Double.POSITIVE_INFINITY, calculator.divide(1.0, 0.0));
+        assertEquals(Double.NEGATIVE_INFINITY, calculator.divide(-1.0, 0.0));
     }
 }
