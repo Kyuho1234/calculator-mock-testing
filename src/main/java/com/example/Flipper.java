@@ -14,18 +14,4 @@ public class Flipper {
     public double flip(double number) {
         return -number;
     }
-    
-    /**
-     * 여러 숫자들의 부호를 바꿉니다.
-     * 
-     * @param numbers 부호를 바꿀 숫자들
-     * @return 부호가 바뀐 숫자들의 배열
-     */
-    public double[] flip(double... numbers) {
-        double[] result = new double[numbers.length];
-        for (int i = 0; i < numbers.length; i++) {
-            result[i] = -numbers[i];
-        }
-        return result;
-    }
 }

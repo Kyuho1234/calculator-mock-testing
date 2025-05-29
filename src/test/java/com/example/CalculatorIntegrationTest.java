@@ -74,11 +74,6 @@ class CalculatorIntegrationTest {
         assertEquals(-5.0, calculator.flip(5.0));
         assertEquals(5.0, calculator.flip(-5.0));
         assertEquals(0.0, calculator.flip(0.0));
-        
-        // 여러 숫자 부호 변경 테스트
-        double[] input = {1.0, -2.0, 3.0, -4.0};
-        double[] expected = {-1.0, 2.0, -3.0, 4.0};
-        assertArrayEquals(expected, calculator.flip(input));
     }    
     @Test
     void testComplexCalculations() {
@@ -107,11 +102,9 @@ class CalculatorIntegrationTest {
         assertEquals(Double.MAX_VALUE, calculator.add(Double.MAX_VALUE, 0.0));
         assertEquals(Double.MIN_VALUE, calculator.add(Double.MIN_VALUE, 0.0));
         
-        // NaN 테스트
-        assertTrue(Double.isNaN(calculator.divide(0.0, 0.0)));
-        
-        // 무한대 테스트
-        assertEquals(Double.POSITIVE_INFINITY, calculator.divide(1.0, 0.0));
-        assertEquals(Double.NEGATIVE_INFINITY, calculator.divide(-1.0, 0.0));
+        // 0으로 나누기 예외 테스트
+        assertThrows(ArithmeticException.class, () -> calculator.divide(0.0, 0.0));
+        assertThrows(ArithmeticException.class, () -> calculator.divide(1.0, 0.0));
+        assertThrows(ArithmeticException.class, () -> calculator.divide(-1.0, 0.0));
     }
 }

@@ -35,7 +35,7 @@ public class Calculator {
         this.flipper = flipper;
     }
     
-    // 덫셈
+    // 덭셈
     public double add(double a, double b) {
         return adder.add(a, b);
     }
@@ -73,10 +73,6 @@ public class Calculator {
     // 부호 변경
     public double flip(double number) {
         return flipper.flip(number);
-    }
-    
-    public double[] flip(double... numbers) {
-        return flipper.flip(numbers);
     }
     
     // Getter 메서드들 (테스트에서 Mock 객체 검증용)
