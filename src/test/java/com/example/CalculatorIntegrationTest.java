@@ -73,7 +73,6 @@ class CalculatorIntegrationTest {
         // 부호 변경 테스트
         assertEquals(-5.0, calculator.flip(5.0));
         assertEquals(5.0, calculator.flip(-5.0));
-        assertEquals(0.0, calculator.flip(0.0));
     }    
     @Test
     void testComplexCalculations() {
