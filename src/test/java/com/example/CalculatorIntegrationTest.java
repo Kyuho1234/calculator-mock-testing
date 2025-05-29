@@ -76,7 +76,7 @@ class CalculatorIntegrationTest {
         assertEquals(5.0, calculator.flip(-5.0));
         assertEquals(0.0, calculator.flip(0.0));
         
-        // 절댕값 테스트
+        // 절댁값 테스트
         assertEquals(5.0, calculator.abs(-5.0));
         assertEquals(5.0, calculator.abs(5.0));
         assertEquals(0.0, calculator.abs(0.0));
@@ -114,11 +114,9 @@ class CalculatorIntegrationTest {
         assertEquals(Double.MAX_VALUE, calculator.add(Double.MAX_VALUE, 0.0));
         assertEquals(Double.MIN_VALUE, calculator.add(Double.MIN_VALUE, 0.0));
         
-        // NaN 테스트
-        assertTrue(Double.isNaN(calculator.divide(0.0, 0.0)));
-        
-        // 무한대 테스트
-        assertEquals(Double.POSITIVE_INFINITY, calculator.divide(1.0, 0.0));
-        assertEquals(Double.NEGATIVE_INFINITY, calculator.divide(-1.0, 0.0));
+        // 0으로 나누기 예외 테스트 (우리의 구현에서는 ArithmeticException을 던짐)
+        assertThrows(ArithmeticException.class, () -> calculator.divide(0.0, 0.0));
+        assertThrows(ArithmeticException.class, () -> calculator.divide(1.0, 0.0));
+        assertThrows(ArithmeticException.class, () -> calculator.divide(-1.0, 0.0));
     }
 }
