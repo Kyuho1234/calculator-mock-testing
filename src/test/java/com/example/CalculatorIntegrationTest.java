@@ -76,7 +76,7 @@ class CalculatorIntegrationTest {
         assertEquals(5.0, calculator.flip(-5.0));
         assertEquals(0.0, calculator.flip(0.0));
         
-        // 절댑값 테스트
+        // 절댁값 테스트
         assertEquals(5.0, calculator.abs(-5.0));
         assertEquals(5.0, calculator.abs(5.0));
         assertEquals(0.0, calculator.abs(0.0));
