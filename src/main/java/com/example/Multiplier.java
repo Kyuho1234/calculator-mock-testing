@@ -22,15 +22,5 @@ public class Multiplier {
      * @param numbers 곱할 숫자들
      * @return 모든 숫자의 곱
      */
-    public double multiply(double... numbers) {
-        if (numbers.length == 0) {
-            return 0;
-        }
-        
-        double result = 1;
-        for (double number : numbers) {
-            result *= number;
-        }
-        return result;
-    }
+
 }
