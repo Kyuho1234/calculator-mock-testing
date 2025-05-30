@@ -35,21 +35,14 @@ public class Calculator {
         this.flipper = flipper;
     }
     
-    // 덭셈
+    // 덧셈
     public double add(double a, double b) {
         return adder.add(a, b);
     }
     
-    public double add(double... numbers) {
-        return adder.add(numbers);
-    }    
     // 뺄셈
     public double subtract(double a, double b) {
         return subtractor.subtract(a, b);
-    }
-    
-    public double subtract(double... numbers) {
-        return subtractor.subtract(numbers);
     }
     
     // 곱셈
@@ -57,17 +50,9 @@ public class Calculator {
         return multiplier.multiply(a, b);
     }
     
-    public double multiply(double... numbers) {
-        return multiplier.multiply(numbers);
-    }
-    
     // 나눗셈
     public double divide(double a, double b) {
         return divider.divide(a, b);
-    }
-    
-    public double divide(double... numbers) {
-        return divider.divide(numbers);
     }
     
     // 부호 변경
