@@ -37,8 +37,7 @@ class CalculatorMockTest {
     void setUp() {
         calculator = new Calculator(mockAdder, mockSubtractor, mockMultiplier, 
                                    mockDivider, mockFlipper);
-    }
-    
+    }    
     @Test
     void testAdd_ShouldCallAdderAdd() {
         // Given
@@ -85,8 +84,7 @@ class CalculatorMockTest {
         // Then
         assertEquals(expected, result);
         verify(mockMultiplier, times(1)).multiply(a, b);
-    }
-    
+    }    
     @Test
     void testDivide_ShouldCallDividerDivide() {
         // Given
