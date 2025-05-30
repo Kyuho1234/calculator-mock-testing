@@ -15,18 +15,4 @@ public class Adder {
     public double add(double a, double b) {
         return a + b;
     }
-    
-    /**
-     * 여러 숫자를 더합니다.
-     * 
-     * @param numbers 더할 숫자들
-     * @return 모든 숫자의 합
-     */
-    public double add(double... numbers) {
-        double sum = 0;
-        for (double number : numbers) {
-            sum += number;
-        }
-        return sum;
-    }
 }
