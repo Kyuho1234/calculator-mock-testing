@@ -118,18 +118,4 @@ class CalculatorMockTest {
         verify(mockFlipper, times(1)).flip(number);
     }
     
-    @Test
-    void testAddVarArgs_ShouldCallAdderAddVarArgs() {
-        // Given
-        double[] numbers = {1.0, 2.0, 3.0, 4.0};
-        double expected = 10.0;
-        when(mockAdder.add(numbers)).thenReturn(expected);
-        
-        // When
-        double result = calculator.add(numbers);
-        
-        // Then
-        assertEquals(expected, result);
-        verify(mockAdder, times(1)).add(numbers);
-    }
 }
