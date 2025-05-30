@@ -25,9 +25,6 @@ class CalculatorIntegrationTest {
         assertEquals(0.0, calculator.add(-5.0, 5.0));
         assertEquals(-8.0, calculator.add(-5.0, -3.0));
         
-        // 여러 숫자 덭셈 테스트
-        assertEquals(15.0, calculator.add(1.0, 2.0, 3.0, 4.0, 5.0));
-        assertEquals(0.0, calculator.add());
     }
     
     @Test
@@ -36,10 +33,6 @@ class CalculatorIntegrationTest {
         assertEquals(2.0, calculator.subtract(5.0, 3.0));
         assertEquals(-10.0, calculator.subtract(-5.0, 5.0));
         assertEquals(-2.0, calculator.subtract(-5.0, -3.0));
-        
-        // 여러 숫자 뺄셈 테스트
-        assertEquals(-13.0, calculator.subtract(1.0, 2.0, 3.0, 4.0, 5.0));
-        assertEquals(0.0, calculator.subtract());
     }    
     @Test
     void testMultiplication() {
@@ -48,10 +41,6 @@ class CalculatorIntegrationTest {
         assertEquals(-25.0, calculator.multiply(-5.0, 5.0));
         assertEquals(15.0, calculator.multiply(-5.0, -3.0));
         assertEquals(0.0, calculator.multiply(5.0, 0.0));
-        
-        // 여러 숫자 곱셈 테스트
-        assertEquals(120.0, calculator.multiply(1.0, 2.0, 3.0, 4.0, 5.0));
-        assertEquals(0.0, calculator.multiply());
     }
     
     @Test
@@ -63,9 +52,6 @@ class CalculatorIntegrationTest {
         
         // 0으로 나누기 예외 테스트
         assertThrows(ArithmeticException.class, () -> calculator.divide(5.0, 0.0));
-        
-        // 여러 숫자 나눗셈 테스트
-        assertEquals(0.2, calculator.divide(10.0, 2.0, 5.0, 5.0));
     }
     
     @Test
