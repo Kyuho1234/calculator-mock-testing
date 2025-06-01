@@ -5,7 +5,7 @@
 
 ## 개요
 
-이 프로젝트는 **TDD를 사용하지 않고** 계산기를 먼저 구현한 후, Mock을 이용한 단위 테스트와 통합 테스트를 진행하는 실습 프로젝트입니다.
+이 프로젝트는 계산기를 먼저 구현한 후, Mock을 이용한 단위 테스트와 통합 테스트를 진행하는 실습 프로젝트.
 
 ## 기능
 
@@ -15,7 +15,7 @@
 - **Subtractor**: 뺄셈 연산  
 - **Multiplier**: 곱셈 연산
 - **Divider**: 나눗셈 연산
-- **Flipper**: 부호 변경 및 절댓값 연산
+- **Flipper**: 부호 변경 연산
 
 ## 프로젝트 구조
 
@@ -32,12 +32,10 @@ calculator-project/
 │   └── test/java/com/example/
 │       ├── CalculatorMockTest.java        # Mock 단위 테스트
 │       ├── CalculatorIntegrationTest.java # 통합 테스트
-│       ├── AdderTest.java                 # Adder 단위 테스트
-│       └── DividerTest.java              # Divider 단위 테스트
 ├── .github/workflows/
 │   └── ci.yml                  # GitHub Actions CI/CD 설정
 ├── build.gradle               # Gradle 빌드 설정
-└── README.md                  # 이 파일
+└── README.md                  
 ```
 
 ## 테스트 전략
