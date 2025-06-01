@@ -87,11 +87,10 @@ calculator-project/
 
 ## CI/CD Pipeline
 
-이 프로젝트는 GitHub Actions를 사용하여 자동화된 CI/CD 파이프라인을 구현합니다:
+GitHub Actions를 사용하여 자동화된 CI/CD 파이프라인을 구현합니다:
 
 ### 트리거
-- `main` 및 `develop` 브랜치에 푸시
-- `main` 브랜치로의 Pull Request
+- main 브랜치에 푸시
 
 ### 파이프라인 단계
 1. **코드 체크아웃**
@@ -122,8 +121,8 @@ calculator-project/
 
 ## 프로젝트 목표 달성
 
-✅ TDD를 사용하지 않고 계산기 구현  
-✅ Mock을 이용한 단위 테스트 작성  
-✅ 통합 테스트 구현  
-✅ GitHub Actions를 이용한 CI/CD 설정  
-✅ 테스트 커버리지 측정 및 리포팅
+ Calculator 구현
+ Mock을 이용한 단위 테스트 작성  
+ 통합 테스트 구현  
+ GitHub Actions를 이용한 CI/CD 설정  
+ 테스트 커버리지 측정 및 리포팅
